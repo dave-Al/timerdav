@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giveaway Page</title>
+    <style>
+        @font-face {
+    font-family: "Raleway";
+    src: url(Raleway-Italic-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Raleway';
+    box-sizing: border-box;
+}
+.container{
+     width: 100vw;
+     height: 100vh;
+     background-image: url(BLUEE\ O.jpg);
+     background position: center;
+     background-size: cover;
+     padding :0 8%;
+     color: #162981;
+     position: relative;
+     text-shadow:default
+}
+.container h2{
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    margin: 2em,2em;
+    text-align: left;
+    color: #fff;
+}
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+
+}
+.content h1 {
+    font-size: 64px;
+    font-weight:500 ;
+    
+}
+.content  span{
+    color:#fff;
+    
+}
+.content button{
+background: transparent;
+border: 2px solid #fff;
+outline: none;
+padding: 12px 25px;
+color: #fff;}
+
+.launch-time{
+    display: flex;}
+
+.launch-time div{
+    flex-basis: 100px;
+}
+.launch-time p{
+    font-size: 60px;
+}
+
+
+.launch-time div p{
+    font: size 60px; 
+    margin-bottom: -8x;
+}
+
+img{
+position: absolute;
+top: 60px;
+left: 850px;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+<h2 class="Logo">DAVE</h2>
+
+<div class="content">
+
+    <p>You are eligible for <span>Giveaway</span></p>
+    <img src="iphone_15-removebg-preview.png"width="500px"height="400px">
+    <h1><span>IPHONE Giveaway</span> Availabe In:</h1>
+    <div class="launch-time">
+<div>
+ <p id="Days">00</p>
+ <span>Days</span>
+</div>
+
+<div>
+    <p id="Hours">00</p>
+    <span>Hours</span>
+</div>;
+
+    <div >
+        <p id="Minutes">00</p>
+        <span>Minutes</span>
+        
+    </div>
+    <div>
+        <p id="Seconds">00</p>
+        <span>Seconds</span>
+        
+        </div>
+
+
+
+</div>
+
+    <button type="button">Learn More</button>
+
+</div>
+    
+</div>
+
+<script>
+var countDownDate = new Date("Mar 14,2024 00:00:00").getTime();
+var x =setInterval(function(){
+var now = new Date().getTime();
+var distance = countDownDate -now;
+
+var Days = Math.floor(distance /(1000*60*60*24));
+var Hours = Math.floor((distance % (1000*60*60*24)) / ( 1000*60*60));
+var Minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+var Seconds = Math.floor((distance % (1000*60)) /1000);
+
+
+
+document.getElementById("Days").innerHTML =     Days;
+document.getElementById("Hours").innerHTML = Hours;
+document.getElementById("Minutes").innerHTML = Minutes;
+document.getElementById("Seconds").innerHTML = Seconds;
+
+},1000);
+
+
+
+
+
+</script>
+
+</body>
+</html>
